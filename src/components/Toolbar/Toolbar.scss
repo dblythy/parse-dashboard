@@ -18,10 +18,28 @@
   transition: left 0.5s ease-in;
   z-index: 5;
 }
-
+.menuButton {
+  display: none;
+}
 @media (max-width: 980px) {
   .toolbar {
     left: 0;
+    height: 300px !important;
+  }
+  .subsection {
+    font-size: 4em !important;
+    vertical-align: bottom;
+    margin-right: 10px;
+  }
+  .section {
+    font-size: 2em !important;
+  }
+  .details {
+    font-size: 2em !important;
+    display: block;
+  }
+  .menuButton {
+    display: block;
   }
 }
 

@@ -26,3 +26,10 @@
     background: #BFD4E5;
   }
 }
+@media (max-width: 980px) {
+  .pill {
+    height: 50px;
+    line-height: 50px;
+    font-size: 0.8em;
+  }
+}

@@ -11,9 +11,19 @@
   overflow: auto;
   max-height: 100vh;
 }
+.menuButton {
+  display: none;
+}
 
 @media (max-width: 980px) {
   .content {
     margin-left: 0;
+  }
+  .menuButton {
+    display: block;
+    position: fixed;
+    top:10px;
+    left: 10px;
+    z-index: 9999;
   }
 }

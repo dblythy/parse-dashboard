@@ -7,6 +7,23 @@
  */
 @import 'stylesheets/globals.scss';
 
+@media (max-width: 980px) {
+  .class_list a {
+    font-size: 3.5em !important;
+    height: 90px !important;
+    line-height: 90px !important;
+    padding-left: 40px !important;
+    width: 90% !important;
+    border-left: 4px solid #3e87b2 !important;
+  }
+  .highlight {
+    position: absolute;
+    width: 8px !important;
+    height: 90px !important;
+    background: white;
+    transition: top 0.2s cubic-bezier(1, 0, 0, 1);
+  }
+}
 .class_list {
   position: relative;
   margin-bottom: 5px;

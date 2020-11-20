@@ -8,8 +8,10 @@
 @import 'stylesheets/globals.scss';
 
 $headerHeight: 48px;
+$mobileHeaderHeight: 300px;
 $menuSectionHeight: 24px;
 $sidebarMenuItemHeight: 48px;
+$mobileSidebarMenuItemHeight: 110px;
 $footerHeight: 36px;
 
 .sidebar {
@@ -37,6 +39,44 @@ $footerHeight: 36px;
 @media (max-width: 980px) {
   .sidebar {
     left: 0;
+    width: 100vw;
+  }
+  .subitem {
+    font-size: 4em !important;
+    height: 2em !important;
+    line-height: 2em !important;
+  }
+  .hidden {
+    left: -100vw !important;
+  }
+  .content {
+    top: $mobileHeaderHeight !important;
+  }
+  
+  .apps + .content {
+    top: $mobileHeaderHeight + $mobileSidebarMenuItemHeight !important;
+  }
+  .currentApp {
+    margin-top : $mobileHeaderHeight !important;
+    height: $mobileSidebarMenuItemHeight !important;
+    font-size: 3em !important;
+    line-height: 100px !important;
+    padding: 0px 20px !important;
+  }
+  .header {
+    display: none;
+  }
+  
+  .section_header {
+    height: $mobileSidebarMenuItemHeight !important;
+    font-size: 5em !important;
+    line-height: 100px !important;
+    padding: 0px 20px !important;
+  }
+  .section_header svg {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 20px;
   }
 
   .toggle {
@@ -54,6 +94,9 @@ $footerHeight: 36px;
       left: 10px;
     }
   }
+  .sidebar__3fA8_ {
+    width: 100vw;
+  } 
 }
 
 .content {

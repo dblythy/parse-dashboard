@@ -17,7 +17,7 @@ import SidebarSection from 'components/Sidebar/SidebarSection.react';
 import SidebarSubItem from 'components/Sidebar/SidebarSubItem.react';
 import styles         from 'components/Sidebar/Sidebar.scss';
 
-const Sidebar = ({
+const Sidebar = ( {
   prefix,
   action,
   actionHandler,
@@ -27,7 +27,8 @@ const Sidebar = ({
   section,
   appSelector,
   primaryBackgroundColor,
-  secondaryBackgroundColor
+  secondaryBackgroundColor,
+  opened
 }, { currentApp }) => {
   const [ appsMenuOpen, setAppsMenuOpen ] = useState(false);
   const _subMenu = subsections => {
@@ -100,8 +101,7 @@ const Sidebar = ({
       </>
     )
   }
-
-  return <div className={styles.sidebar}>
+  return <div className={`${styles.sidebar} ${opened ? '' : styles.hidden}`}>
     <SidebarHeader />
     {sidebarContent}
     <div className={styles.footer}>

@@ -39,7 +39,31 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+@media (max-width: 980px) {
+  .header {
+    height: 100% !important;
+  }
+  .name {
+    color: white;
+    font-size: 2em;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 8px;
+    float:none;
+    max-width: 100%;
+    overflow: scroll;
+    text-overflow: clip;
+  }
+  
+  .type {
+    color: #A2A6B1;
+    font-size: 2em;
+    height: 40px;
+    line-height: 40px;
+    overflow: scroll;
+    text-overflow: clip;
+  }
+}
 .ascending {
   padding-right: 20px;
 

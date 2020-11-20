@@ -16,7 +16,13 @@
   padding: 5px 4px 0;
   border-right: 1px solid #e3e3ea;
 }
-
+@media (max-width: 980px) {
+  .cell {
+    height: 90px;
+    line-height: 90px;
+    font-size: 3em !important;
+  }
+}
 .empty {
   color: #7D929F;
 }

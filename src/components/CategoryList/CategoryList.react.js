@@ -34,12 +34,13 @@ export default class CategoryList extends React.Component {
 
   _updateHighlight() {
     if (this.highlight) {
+      let height = parseFloat(getComputedStyle(this.highlight).height);
       for (let i = 0; i < this.props.categories.length; i++) {
         let c = this.props.categories[i];
         let id = c.id || c.name;
         if (id === this.props.current) {
           this.highlight.style.display = 'block';
-          this.highlight.style.top = (i * 20) + 'px';
+          this.highlight.style.top = (i * height) + 'px';
           return;
         }
       }

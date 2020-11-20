@@ -291,6 +291,7 @@ export default class BrowserCell extends Component {
     if (current) {
       classes.push(styles.current);
     }
+    width = width * (window.outerWidth < 980 ? 2 : 1);
     return (
       <span
         ref={this.cellRef}

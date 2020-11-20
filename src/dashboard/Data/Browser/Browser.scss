@@ -27,6 +27,25 @@
 @media (max-width: 980px) {
   .browser {
     left: 0;
+    top: 300px;
+  }
+  .table {
+    top : 90px !important;
+  }
+  .tableRow {
+    height: 91px !important;
+  }
+  .checkCell {
+    width: 90px !important;
+    height: 90px !important;
+    line-height: 91px ;
+  }
+  .checkCell input {
+    width: 40px !important;
+    height: 90px !important;
+  }
+  .toolbarButton span, .entry, .title{
+    font-size: 3em !important;
   }
 }
 

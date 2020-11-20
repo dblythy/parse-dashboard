@@ -11,9 +11,21 @@ import React         from 'react';
 import Sidebar       from 'components/Sidebar/Sidebar.react';
 import SidebarToggle from 'components/Sidebar/SidebarToggle.react';
 import styles        from 'dashboard/Dashboard.scss';
+import Icon      from 'components/Icon/Icon.react';
 
 export default class DashboardView extends React.Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      drawOpened: false
+    }
+    this.toggleDrawer = this.toggleDrawer.bind(this)
+  }
+  toggleDrawer() {
+    this.setState({
+      drawOpened: !this.state.drawOpened
+    })
+  }
   /* A DashboardView renders two pieces: the sidebar, and the app itself */
   render() {
     let sidebarChildren = null;
@@ -234,9 +246,9 @@ export default class DashboardView extends React.Component {
         subsections: settingsSections
       });
     }
-
     let sidebar = (
     <Sidebar
+      opened={this.state.drawOpened}
       sections={appSidebarSections}
       appSelector={true}
       section={this.section}
@@ -249,6 +261,19 @@ export default class DashboardView extends React.Component {
       {sidebarChildren}
     </Sidebar>);
 
+     let menuButton = (
+      <a
+        className={styles.menuButton}
+        onClick={this.toggleDrawer}
+      >
+        <Icon
+          width={100}
+          height={100}
+          fill="#ffffff"
+          name={this.state.drawOpened ? 'left-outline' : 'hamburger'}
+        />
+      </a>
+    );
     return (
       <div className={styles.dashboard}>
         <div className={styles.content}>
@@ -256,6 +281,7 @@ export default class DashboardView extends React.Component {
         </div>
         {sidebar}
         <SidebarToggle />
+        <div>{menuButton}</div>
       </div>
     );
   }
