@@ -11,6 +11,7 @@ import Icon      from 'components/Icon/Icon.react';
 import styles    from 'components/Toolbar/Toolbar.scss';
 import history   from 'dashboard/history';
 
+
 const goBack = () => history.goBack();
 
 let Toolbar = (props) => {

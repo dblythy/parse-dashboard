@@ -146,9 +146,10 @@ let Editor = ({ top, left, type, targetClass, value, readonly, width, onCommit, 
         onCommit={encodeCommit} />
     );
   }
-
+  left = left * (window.outerWidth < 980 ? 2 : 1);
+  top = top * (window.outerWidth < 980 ? 3 : 1)
   return (
-    <div style={{ position: 'absolute', top: top, left: left }}>
+    <div style={{ position: 'absolute', top: top, left: left,transform: `scale(${window.outerWidth < 980 ? 4 : 1}`}}>
       {content}
     </div>
   );

@@ -6,7 +6,11 @@
  * the root directory of this source tree.
  */
 @import 'stylesheets/globals.scss';
-
+@media (max-width: 980px) {
+  .entry, .title{
+    font-size: 3em !important;
+  }
+}
 .wrap {
   display: inline-block;
 }
