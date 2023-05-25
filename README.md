@@ -313,6 +313,8 @@ You can prevent some columns to be sortable by adding `preventSort` to columnPre
 ]
 ```
 
+The current `columnPreferences` can be exported by visiting the `App Settings` page from within the Dashboard.
+
 ### Custom order in the filter popup
 
 If you have classes with a lot of columns and you filter them often with the same columns you can sort those to the top by extending the `columnPreference` setting with the `filterSortToTop` option:
@@ -329,7 +331,7 @@ If you have classes with a lot of columns and you filter them often with the sam
           {
             "name": "email",
             "filterSortToTop": true
-          }          
+          }
         ]
       }
     }
@@ -442,7 +444,7 @@ You can configure your dashboard for Basic Authentication by adding usernames an
 ```
 
 You can store the password in either `plain text` or `bcrypt` formats. To use the `bcrypt` format, you must set the config `useEncryptedPasswords` parameter to `true`.
-You can generate encrypted passwords by using `parse-dashboard --createUser`, and pasting the result in your users config.
+You can generate users by using `parse-dashboard --createUser`, or visiting the `App Settings` page from within the Dashboard and pasting the result in your users config.
 
 ### Multi-Factor Authentication (One-Time Password)
 
@@ -452,7 +454,7 @@ With MFA enabled, a user must provide a one-time password that is typically boun
 
 The user requires an authenticator app to generate the one-time password. These apps are provided by many 3rd parties and mostly for free.
 
-If you create a new user by running `parse-dashboard --createUser`, you will be  asked whether you want to enable MFA for the new user. To enable MFA for an existing user, 
+If you create a new user by running `parse-dashboard --createUser`, you will be  asked whether you want to enable MFA for the new user. To enable MFA for an existing user,
 run `parse-dashboard --createMFA` to generate a `mfa` secret that you then add to the existing user configuration, for example:
 
 ```json
@@ -493,9 +495,9 @@ To do so, update your `parse-dashboard-config.json` configuration file to match 
 ```
 The effect of such a configuration is as follows:
 
-When `user1` logs in, he/she will be able to manage `myAppId1` and `myAppId2` from the dashboard.
+When `user1` logs in, they will be able to manage `myAppId1` and `myAppId2` from the dashboard.
 
-When *`user2`*  logs in, he/she will only be able to manage *`myAppId1`* from the dashboard.
+When *`user2`*  logs in, they will only be able to manage *`myAppId1`* from the dashboard.
 
 ## Use Read-Only masterKey
 
